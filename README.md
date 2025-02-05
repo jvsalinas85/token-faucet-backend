@@ -22,7 +22,7 @@ Create a `.env` file in the root of the project with the following variables:
 | Variable             | Description                                                                                     |
 |----------------------|-------------------------------------------------------------------------------------------------|
 | `TOKEN_ADDRESS`      | Contract address of the token or any ERC20-compliant token (e.g., `0x779877A7B0D9E8603169DdbD7836e478b4624789`). |
-| `TOKENS_TO_SEND`     | Amount of tokens to send in each faucet request (e.g., `10` for sending 10 tokens).            |
+| `TOKENS_TO_SEND`     | Amount of tokens to send in each faucet request (e.g., `10000000000000000000` for sending 10 tokens).            |
 | `MASTER_PRIVATE_KEY` | Private key of the master account holding sufficient tokens for transfers.                     |
 | `RPC`                | RPC endpoint for Sepolia (e.g., from [getblock.io](https://getblock.io)).                      |
 
@@ -118,7 +118,7 @@ Crea un archivo `.env` en la raíz del proyecto con las siguientes variables:
 | Variable             | Descripción                                                                                     |
 |----------------------|-------------------------------------------------------------------------------------------------|
 | `TOKEN_ADDRESS`      | Dirección del contrato del token o cualquier token compatible con ERC20 (por ejemplo, `0x779877A7B0D9E8603169DdbD7836e478b4624789`). |
-| `TOKENS_TO_SEND`     | Cantidad de tokens a enviar en cada solicitud al faucet (por ejemplo, `10` para enviar 10 tokens).            |
+| `TOKENS_TO_SEND`     | Cantidad de tokens a enviar en cada solicitud al faucet (por ejemplo, `10000000000000000000` para enviar 10 tokens).            |
 | `MASTER_PRIVATE_KEY` | Clave privada de la cuenta maestra que contiene suficientes tokens para transferencias.                     |
 | `RPC`                | Endpoint RPC para Sepolia (por ejemplo, desde [getblock.io](https://getblock.io)).                      |
 
