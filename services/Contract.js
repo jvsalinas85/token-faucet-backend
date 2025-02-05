@@ -1,7 +1,9 @@
 const { ethers } = require("ethers");
+const { getMasterWallet } = require("./Wallet");
 
 const TOKEN_ADDRESS = process.env.TOKEN_ADDRESS;
 const RPC = process.env.RPC;
+const TOKENS_TO_SEND = process.env.TOKENS_TO_SEND;
 
 const TOKEN_ABI = [
     // Token ABI
@@ -17,10 +19,15 @@ const TOKEN_ABI = [
 
 ];
 
-const provider = new ethers.providers.JsonRpcProvider(RPC);
+const provider = new ethers.providers.JsonRpcProvider(RPC); //provider
+
+const MASTER_WALLET = getMasterWallet(); //getting master wallet
+
+//signer
+const MASTER_WALLET_WITH_PROVIDER = MASTER_WALLET.connect(provider);
 
 //contract instance
-const contract = new ethers.Contract(TOKEN_ADDRESS, TOKEN_ABI, provider); 
+const contract = new ethers.Contract(TOKEN_ADDRESS, TOKEN_ABI, MASTER_WALLET_WITH_PROVIDER); 
 
 
 //get balance function
@@ -30,6 +37,13 @@ const getTokenBalance = async (address) => {
     return formattedBalance;
 };
 
+const sendTokens = async (address) => {
+    const tx = await contract.transfer(address, TOKENS_TO_SEND); //send tokens
+    await tx.wait();
+    return tx.hash;
+}
+
 module.exports = {
-    getTokenBalance
+    getTokenBalance,
+    sendTokens
 };
