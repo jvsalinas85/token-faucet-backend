@@ -1,6 +1,6 @@
-# 🚰 LINK Token Faucet API
+# 🚰  Token Faucet API
 
-> A **LINK token faucet** built with **Ethers.js** and **Express**, designed to send a specific amount of LINK tokens (or any ERC20-compliant token) to a valid EVM address.
+> A ** TOKEN faucet** built with **Ethers.js** and **Express**, designed to send a specific amount of tokens (or any ERC20-compliant token) to a valid EVM address.
 
 ![Node.js](https://img.shields.io/badge/Node.js-%5E18.0.0-green?logo=node.js) ![Express.js](https://img.shields.io/badge/Express.js-%5E4.0.0-blue?logo=express) ![Ethers.js](https://img.shields.io/badge/Ethers.js-%5E5.0.0-purple?logo=ethereum) ![ERC20](https://img.shields.io/badge/ERC20-Compatible-yellow)
 
@@ -8,7 +8,7 @@
 
 ## ✨ Features
 
-- 🚀 **Send LINK tokens (or any ERC20 token)**: Transfers tokens to valid EVM addresses.
+- 🚀 **Send tokens (or any ERC20 token)**: Transfers tokens to valid EVM addresses.
 - 🔒 **Secure setup**: Protects the master account with a private key.
 - ⚡ **Sepolia-compatible**: Works with an RPC endpoint configured in MetaMask (e.g., via [getblock.io](https://getblock.io)).
 - 🛠️ **Adaptable**: Can work with any ERC20-compliant token contract.
@@ -21,7 +21,7 @@ Create a `.env` file in the root of the project with the following variables:
 
 | Variable             | Description                                                                                     |
 |----------------------|-------------------------------------------------------------------------------------------------|
-| `TOKEN_ADDRESS`      | Contract address of the LINK token or any ERC20-compliant token (e.g., `0x779877A7B0D9E8603169DdbD7836e478b4624789`). |
+| `TOKEN_ADDRESS`      | Contract address of the token or any ERC20-compliant token (e.g., `0x779877A7B0D9E8603169DdbD7836e478b4624789`). |
 | `TOKENS_TO_SEND`     | Amount of tokens to send in each faucet request (e.g., `10` for sending 10 tokens).            |
 | `MASTER_PRIVATE_KEY` | Private key of the master account holding sufficient tokens for transfers.                     |
 | `RPC`                | RPC endpoint for Sepolia (e.g., from [getblock.io](https://getblock.io)).                      |
@@ -44,8 +44,8 @@ Make sure you have installed:
 
 1. **Initialize the project**:  
    ```bash
-   mkdir link-faucet-api
-   cd link-faucet-api
+   mkdir faucet-api
+   cd faucet-api
    npm init -y
    ```
 
